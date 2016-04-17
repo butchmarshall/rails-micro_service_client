@@ -11,6 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160417050223) do
+
+  create_table "micro_service_servers", force: :cascade do |t|
+    t.string   "client_id"
+    t.string   "secret"
+    t.string   "url"
+    t.integer  "timestamp"
+    t.boolean  "uninstalled"
+    t.integer  "attempt"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
 end
