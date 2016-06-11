@@ -1,5 +1,5 @@
 module MicroServiceClient
-	class MicroserviceServerInstallJob < ActiveJob::Base
+	class MicroServiceServerInstallJob < ActiveJob::Base
 		queue_as :default
 
 		def perform(*args)
@@ -14,7 +14,7 @@ module MicroServiceClient
 				params["attempt"] = params["attempt"] + 1
 
 				# Try again in one minute
-				MicroserviceServerInstallJob.set(wait: 1.minute).perform_later(params) unless params["attempt"].to_i > 3
+				MicroServiceServerInstallJob.set(wait: 1.minute).perform_later(params) unless params["attempt"].to_i > 3
 			end
 		end
 	end

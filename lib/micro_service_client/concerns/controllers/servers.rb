@@ -5,7 +5,7 @@ module MicroServiceClient
 				extend ActiveSupport::Concern
 
 				def create
-					MicroserviceServerInstallJob.perform_later(install_params)
+					MicroServiceServerInstallJob.perform_later(install_params)
 
 					render :nothing => true, :status => 204
 				end

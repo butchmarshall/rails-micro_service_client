@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
 	s.add_dependency "rails", ">= 4.2.0"
 
-	s.add_dependency "micro_service-server", "~> 0.0.1"
+	s.add_dependency "micro_service-server", ">= 0.0.1"
 
 	if RUBY_PLATFORM == 'java'
 		s.add_development_dependency "jdbc-sqlite3", "> 0"
